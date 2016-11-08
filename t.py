@@ -12,8 +12,8 @@ def trial(N=100, D=3, S=1):
     print "N=%d D=%d S=%.1f" % (N, D, S)
     X = np.array([generate_x(D) for _i in range(N)])
     Y = X.sum(axis=1)
-    noise = np.random.normal(scale=S, size=X.shape)
-    X += noise
+    noise = np.random.normal(scale=S, size=Y.shape)
+    Y += noise
 
     scoreSGD = []
     scoreSVR = []
